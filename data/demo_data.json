@@ -1,0 +1,35 @@
+{
+  "transactions": [
+    {"id":"demo-2026-05-salary","description":"May salary","amount":68000,"type":"income","category":"Salary","date":"2026-05-01","payment_method":"Bank transfer","notes":"Monthly salary"},
+    {"id":"demo-2026-05-rent","description":"Apartment rent","amount":16000,"type":"expense","category":"Housing","date":"2026-05-03","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-05-food","description":"Groceries and market","amount":5340,"type":"expense","category":"Food","date":"2026-05-09","payment_method":"UPI","notes":"Weekly groceries"},
+    {"id":"demo-2026-06-salary","description":"June salary","amount":68000,"type":"income","category":"Salary","date":"2026-06-01","payment_method":"Bank transfer","notes":"Monthly salary"},
+    {"id":"demo-2026-06-rent","description":"Apartment rent","amount":16000,"type":"expense","category":"Housing","date":"2026-06-03","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-06-food","description":"Groceries","amount":6125,"type":"expense","category":"Food","date":"2026-06-12","payment_method":"Card","notes":""},
+    {"id":"demo-2026-06-train","description":"Train tickets home","amount":2450,"type":"expense","category":"Travel","date":"2026-06-19","payment_method":"UPI","notes":"Weekend visit"},
+    {"id":"demo-2026-07-salary","description":"July salary","amount":68000,"type":"income","category":"Salary","date":"2026-07-01","payment_method":"Bank transfer","notes":"Monthly salary"},
+    {"id":"demo-2026-07-rent","description":"Apartment rent","amount":16000,"type":"expense","category":"Housing","date":"2026-07-03","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-07-course","description":"Design course fee","amount":4999,"type":"expense","category":"Education","date":"2026-07-08","payment_method":"Card","notes":"Online course"},
+    {"id":"demo-2026-07-food","description":"Groceries","amount":5750,"type":"expense","category":"Food","date":"2026-07-15","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-08-salary","description":"August salary","amount":68000,"type":"income","category":"Salary","date":"2026-08-01","payment_method":"Bank transfer","notes":"Monthly salary"},
+    {"id":"demo-2026-08-rent","description":"Apartment rent","amount":16000,"type":"expense","category":"Housing","date":"2026-08-03","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-08-food","description":"Groceries and produce","amount":6280,"type":"expense","category":"Food","date":"2026-08-11","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-08-electric","description":"Electricity bill","amount":1830,"type":"expense","category":"Utilities","date":"2026-08-18","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-09-salary","description":"September salary","amount":68000,"type":"income","category":"Salary","date":"2026-09-01","payment_method":"Bank transfer","notes":"Monthly salary"},
+    {"id":"demo-2026-09-rent","description":"Apartment rent","amount":16000,"type":"expense","category":"Housing","date":"2026-09-03","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-09-food","description":"Groceries","amount":5920,"type":"expense","category":"Food","date":"2026-09-12","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-09-dentist","description":"Dental check-up","amount":2200,"type":"expense","category":"Health","date":"2026-09-23","payment_method":"Card","notes":"Routine check-up"},
+    {"id":"demo-2026-10-salary","description":"October salary","amount":68000,"type":"income","category":"Salary","date":"2026-10-01","payment_method":"Bank transfer","notes":"Monthly salary"},
+    {"id":"demo-2026-10-rent","description":"Apartment rent","amount":16000,"type":"expense","category":"Housing","date":"2026-10-03","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-10-market","description":"Groceries and produce","amount":6540,"type":"expense","category":"Food","date":"2026-10-09","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-10-metro","description":"Metro card recharge","amount":1500,"type":"expense","category":"Transport","date":"2026-10-14","payment_method":"UPI","notes":""},
+    {"id":"demo-2026-10-freelance","description":"Poster design project","amount":8500,"type":"income","category":"Freelance","date":"2026-10-17","payment_method":"Bank transfer","notes":"One-off project"},
+    {"id":"demo-2026-10-electric","description":"Electricity and water","amount":2275,"type":"expense","category":"Utilities","date":"2026-10-21","payment_method":"UPI","notes":""}
+  ],
+  "budgets": [
+    {"category":"Food","limit":8000,"month":"2026-10"},
+    {"category":"Transport","limit":3000,"month":"2026-10"},
+    {"category":"Utilities","limit":3500,"month":"2026-10"},
+    {"category":"Food","limit":8000,"month":"2026-09"}
+  ]
+}
