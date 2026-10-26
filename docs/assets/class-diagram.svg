@@ -1,0 +1,61 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="850" viewBox="0 0 1100 850">
+  <rect width="1100" height="850" rx="20" fill="#FBF7EF"/>
+  <text x="550" y="48" font-family="Arial,sans-serif" font-size="30" font-weight="bold" fill="#1F5A45" text-anchor="middle">PaisaLedger — OOP Class Diagram</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1F5A45"/></marker>
+  </defs>
+  <g font-family="Arial,sans-serif" fill="#1C1A17">
+    <rect x="365" y="80" width="370" height="145" rx="10" fill="#DCECE0" stroke="#1F5A45" stroke-width="2"/>
+    <rect x="365" y="80" width="370" height="38" rx="10" fill="#1F5A45"/>
+    <text x="550" y="105" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Transaction (abstract)</text>
+    <text x="385" y="143" font-size="14">id, description, amount, type</text>
+    <text x="385" y="164" font-size="14">category, date, payment_method</text>
+    <line x1="365" y1="177" x2="735" y2="177" stroke="#1F5A45"/>
+    <text x="385" y="198" font-size="13">validate() · get_balance_effect()</text>
+    <path d="M460 290 L460 258 L500 258 L500 230" stroke="#1F5A45" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M640 290 L640 258 L600 258 L600 230" stroke="#1F5A45" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <rect x="285" y="290" width="300" height="105" rx="9" fill="#FFFFFF" stroke="#1F5A45" stroke-width="2"/>
+    <text x="435" y="320" font-size="17" font-weight="bold" text-anchor="middle">IncomeTransaction</text>
+    <line x1="285" y1="332" x2="585" y2="332" stroke="#1F5A45"/>
+    <text x="305" y="357" font-size="14">get_balance_effect()</text>
+    <text x="305" y="378" font-size="13">Returns positive amount</text>
+    <rect x="615" y="290" width="300" height="105" rx="9" fill="#FFFFFF" stroke="#1F5A45" stroke-width="2"/>
+    <text x="765" y="320" font-size="17" font-weight="bold" text-anchor="middle">ExpenseTransaction</text>
+    <line x1="615" y1="332" x2="915" y2="332" stroke="#1F5A45"/>
+    <text x="635" y="357" font-size="14">get_balance_effect()</text>
+    <text x="635" y="378" font-size="13">Returns negative amount</text>
+    <rect x="55" y="475" width="300" height="145" rx="9" fill="#E7EFFB" stroke="#3468A8" stroke-width="2"/>
+    <rect x="55" y="475" width="300" height="37" rx="9" fill="#3468A8"/>
+    <text x="205" y="500" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Account</text>
+    <text x="75" y="537" font-size="14">add / update / remove transaction</text>
+    <text x="75" y="559" font-size="14">get_balance()</text>
+    <text x="75" y="581" font-size="14">get_total_income()</text>
+    <text x="75" y="603" font-size="14">get_total_expenses()</text>
+    <rect x="400" y="475" width="300" height="145" rx="9" fill="#F7EBD0" stroke="#A87916" stroke-width="2"/>
+    <rect x="400" y="475" width="300" height="37" rx="9" fill="#A87916"/>
+    <text x="550" y="500" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Budget</text>
+    <text x="420" y="537" font-size="14">category, limit, month</text>
+    <text x="420" y="559" font-size="14">calculate_spending()</text>
+    <text x="420" y="581" font-size="14">remaining_budget()</text>
+    <text x="420" y="603" font-size="14">get_budget_status()</text>
+    <rect x="745" y="475" width="300" height="145" rx="9" fill="#E9E0F6" stroke="#7551A6" stroke-width="2"/>
+    <rect x="745" y="475" width="300" height="37" rx="9" fill="#7551A6"/>
+    <text x="895" y="500" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">FinancialAnalyzer</text>
+    <text x="765" y="537" font-size="14">calculate_savings()</text>
+    <text x="765" y="559" font-size="14">calculate_savings_rate()</text>
+    <text x="765" y="581" font-size="14">get_category_breakdown()</text>
+    <text x="765" y="603" font-size="14">get_monthly_summary()</text>
+    <rect x="365" y="685" width="370" height="115" rx="9" fill="#F7DFDF" stroke="#A94343" stroke-width="2"/>
+    <rect x="365" y="685" width="370" height="37" rx="9" fill="#A94343"/>
+    <text x="550" y="710" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">StatementGenerator</text>
+    <text x="385" y="748" font-size="14">generate_statement_data()</text>
+    <text x="385" y="771" font-size="14">generate_pdf()</text>
+    <path d="M205 475 L205 440 L350 440 L350 370 L285 370" stroke="#3468A8" stroke-width="2" fill="none"/>
+    <text x="215" y="431" font-size="12" fill="#3468A8">manages transactions</text>
+    <path d="M895 475 L895 440 L550 440 L550 425" stroke="#7551A6" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <text x="650" y="431" font-size="12" fill="#7551A6">analyzes account data</text>
+    <path d="M550 620 L550 685" stroke="#A94343" stroke-width="2" fill="none"/>
+    <text x="565" y="656" font-size="12" fill="#A94343">account statements</text>
+  </g>
+</svg>
