@@ -351,3 +351,37 @@ classDiagram
 - [📁 Project Structure](#-project-structure)
 - [🧪 Testing](#-testing)
 - [🎓 Academic Project](#-academic-project)
+
+---
+
+## 🌟 Why PaisaLedger?
+
+<div align="center">
+
+| 💰 Personal Finance | 📊 Financial Analytics |
+|:---:|:---:|
+| Track income and expenses | Analyze monthly savings |
+| Manage category budgets | Visualize spending patterns |
+
+| 🧩 OOP Architecture | 📄 Financial Reports |
+|:---:|:---:|
+| Abstract classes and inheritance | Generate PDF statements |
+| Modular Python components | Organized transaction records |
+
+</div>
+
+## 📌 Project Information
+
+- **Project type:** College OOP project
+- **Language:** Python
+- **Web framework:** Flask
+- **Testing:** Python `unittest`
+- **Interface:** HTML, CSS, JavaScript, and Chart.js
+
+---
+
+<div align="center">
+
+**Built with Python and a focus on smarter personal finance.**
+
+</div>
