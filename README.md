@@ -274,6 +274,8 @@ Get a quick overview of your account balance, income, expenses, savings, and fin
 
 ## 🧩 Object-Oriented Programming — Class Diagram
 
+![PaisaLedger OOP Class Diagram](docs/assets/class-diagram.svg)
+
 ```mermaid
 classDiagram
     class Transaction {
