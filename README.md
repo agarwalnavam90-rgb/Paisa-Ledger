@@ -254,3 +254,15 @@ flowchart TD
 3. Python models handle financial operations.
 4. The storage layer manages financial data.
 5. Analysis and reporting features present useful results.
+
+---
+
+## 🖥️ Application Preview
+
+### 📊 Dashboard
+
+Get a quick overview of your account balance, income, expenses, savings, and financial charts.
+
+![PaisaLedger Dashboard](dashboard.png)
+
+---
