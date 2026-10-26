@@ -1,5 +1,9 @@
 
 <div align="center">
+  <img src="docs/assets/banner.svg" alt="PaisaLedger — Personal Finance Management and Analytics" width="100%">
+</div>
+
+<div align="center">
 
 # 💰 PaisaLedger
 
