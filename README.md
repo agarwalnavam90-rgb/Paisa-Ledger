@@ -233,3 +233,24 @@ python -m unittest discover -s tests -v
 ## 🎓 Academic Project
 
 PaisaLedger is designed to demonstrate practical object-oriented programming, financial data management, software testing, and data visualization in a Python application.
+
+## 🗺️ System Architecture
+
+```mermaid
+flowchart TD
+    A["👤 User"] --> B["🖥️ Web Interface<br/>HTML, CSS, JavaScript"]
+    B --> C["⚙️ Flask API"]
+    C --> D["🧩 Python Models<br/>OOP Business Logic"]
+    C --> E["💾 Storage Layer"]
+    D --> F["📊 Financial Analysis"]
+    F --> G["📄 Reports and Charts"]
+    E --> C
+```
+
+### 🔄 How It Works
+
+1. The user interacts with the web interface.
+2. The Flask API processes requests.
+3. Python models handle financial operations.
+4. The storage layer manages financial data.
+5. Analysis and reporting features present useful results.
