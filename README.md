@@ -165,3 +165,71 @@ The JSON demo is for learning and local use. Vercel serverless filesystems are n
 - Local JSON storage is intended for one demo account and concurrent writes are not coordinated.
 - Chart.js and web fonts use CDNs; add local copies if offline use is required.
 - Future work could add account import/export, recurring transactions, configurable categories, accessible chart data tables, and persistent database storage.
+
+---
+
+## ✨ Project Highlights
+
+| Feature | Description |
+|---|---|
+| 📊 Dashboard | View account balance, income, expenses, and savings |
+| 💳 Transactions | Track and manage financial transactions |
+| 🎯 Budgets | Monitor spending against budget limits |
+| 📈 Analytics | Explore spending patterns through charts |
+| 📄 Reports | Generate financial statement PDFs |
+| 🧩 OOP Design | Explore classes, inheritance, and object-oriented concepts |
+
+## 🏗️ Object-Oriented Design
+
+PaisaLedger demonstrates core OOP concepts through a modular Python codebase.
+
+- **Encapsulation:** Organizes financial data and related operations.
+- **Inheritance:** Specialized transaction types extend common transaction behavior.
+- **Polymorphism:** Supports common interfaces for related transaction types.
+- **Abstraction:** Separates application logic from storage and presentation.
+
+## 🛠️ Technology Stack
+
+- Python
+- Flask
+- HTML, CSS, and JavaScript
+- Chart.js
+- Unit testing with Python's `unittest`
+
+## 📁 Project Structure
+
+```text
+Paisa-Ledger/
+├── api/
+│   └── index.py
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── data/
+│   └── demo_data.json
+├── fonts/
+│   └── DejaVuSans.ttf
+├── tests/
+│   └── test_models.py
+├── models.py
+├── storage.py
+├── oop_examples.py
+├── requirements.txt
+├── vercel.json
+└── README.md
+```
+
+## 🧪 Testing
+
+The project has **22 passing unit tests** covering its existing test suite.
+
+Run the tests locally with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## 🎓 Academic Project
+
+PaisaLedger is designed to demonstrate practical object-oriented programming, financial data management, software testing, and data visualization in a Python application.
