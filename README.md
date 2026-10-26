@@ -304,3 +304,15 @@ classDiagram
 ```
 
 This diagram illustrates the intended relationships between transactions, accounts, and storage. Check the actual class names and methods in your source code before presenting it as an exact representation of your implementation.
+
+## 📚 Table of Contents
+
+- [✨ Project Highlights](#-project-highlights)
+- [🖥️ Application Preview](#️-application-preview)
+- [🗺️ System Architecture](#️-system-architecture)
+- [🧩 Object-Oriented Design](#-object-oriented-design)
+- [📐 OOP Class Diagram](#-object-oriented-programming--class-diagram)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📁 Project Structure](#-project-structure)
+- [🧪 Testing](#-testing)
+- [🎓 Academic Project](#-academic-project)
