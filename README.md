@@ -1,3 +1,22 @@
+
+<div align="center">
+
+# 💰 PaisaLedger
+
+### Personal Finance Management & Analytics System
+
+A Python-based personal finance application for managing transactions, tracking budgets, and understanding financial habits through interactive charts and reports.
+
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Web_App-000000?style=for-the-badge&logo=flask&logoColor=white)
+![OOP](https://img.shields.io/badge/Design-OOP-1F5A45?style=for-the-badge)
+![Tests](https://img.shields.io/badge/Tests-22_Passing-success?style=for-the-badge)
+
+**Track your money. Understand your habits. Plan smarter.**
+
+</div>
+
+---
 # PaisaLedger — Personal Finance Management & Analytics
 
 A beginner-friendly college OOP mini project for recording income and expenses, understanding monthly spending, setting category budgets, and exporting a dated account statement. It uses Python and Flask on the server, plain HTML/CSS/JavaScript in the browser, and a local JSON file for demo data.
