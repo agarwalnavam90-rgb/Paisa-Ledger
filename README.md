@@ -267,43 +267,72 @@ Get a quick overview of your account balance, income, expenses, savings, and fin
 
 ---
 
+
 ## 🧩 Object-Oriented Programming — Class Diagram
 
 ```mermaid
 classDiagram
     class Transaction {
+        <<abstract>>
+        +id
+        +description
         +amount
+        +type
         +category
         +date
-        +description
+        +validate()
+        +get_balance_effect()
+        +get_display_label()
+        +to_dict()
     }
 
     class IncomeTransaction {
-        +get_type()
+        +get_balance_effect()
     }
 
     class ExpenseTransaction {
-        +get_type()
+        +get_balance_effect()
     }
 
     class Account {
-        +balance
         +add_transaction()
+        +update_transaction()
+        +remove_transaction()
         +get_balance()
+        +get_total_income()
+        +get_total_expenses()
+        +get_transactions()
     }
 
-    class Storage {
-        +load_data()
-        +save_data()
+    class Budget {
+        +calculate_spending()
+        +remaining_budget()
+        +get_budget_status()
+    }
+
+    class FinancialAnalyzer {
+        +calculate_savings()
+        +calculate_savings_rate()
+        +get_category_breakdown()
+        +get_monthly_summary()
+        +compare_months()
+    }
+
+    class StatementGenerator {
+        +generate_statement_data()
+        +generate_pdf()
+        +calculate_opening_balance()
+        +calculate_closing_balance()
     }
 
     Transaction <|-- IncomeTransaction
     Transaction <|-- ExpenseTransaction
-    Account o-- Transaction
-    Account --> Storage
+    Account o-- Transaction : manages
+    FinancialAnalyzer --> Account : analyzes
+    StatementGenerator --> Account : generates statements
+    Budget ..> Transaction : calculates spending from
 ```
 
-This diagram illustrates the intended relationships between transactions, accounts, and storage. Check the actual class names and methods in your source code before presenting it as an exact representation of your implementation.
 
 ## 📚 Table of Contents
 
