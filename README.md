@@ -266,3 +266,41 @@ Get a quick overview of your account balance, income, expenses, savings, and fin
 ![PaisaLedger Dashboard](dashboard.png)
 
 ---
+
+## 🧩 Object-Oriented Programming — Class Diagram
+
+```mermaid
+classDiagram
+    class Transaction {
+        +amount
+        +category
+        +date
+        +description
+    }
+
+    class IncomeTransaction {
+        +get_type()
+    }
+
+    class ExpenseTransaction {
+        +get_type()
+    }
+
+    class Account {
+        +balance
+        +add_transaction()
+        +get_balance()
+    }
+
+    class Storage {
+        +load_data()
+        +save_data()
+    }
+
+    Transaction <|-- IncomeTransaction
+    Transaction <|-- ExpenseTransaction
+    Account o-- Transaction
+    Account --> Storage
+```
+
+This diagram illustrates the intended relationships between transactions, accounts, and storage. Check the actual class names and methods in your source code before presenting it as an exact representation of your implementation.
