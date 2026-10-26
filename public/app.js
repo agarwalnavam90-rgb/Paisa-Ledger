@@ -45,7 +45,29 @@ async function loadDashboardSummary() {
   $('#dashboard-month').textContent = d.month;
   $('#balance').textContent=money(d.balance); $('#month-income').textContent=money(d.income); $('#month-expenses').textContent=money(d.expenses);
   $('#month-savings').textContent=money(d.net_savings); $('#savings-rate').textContent=`${d.savings_rate}%`; $('#transaction-count').textContent=d.transaction_count;
-  const cashOptions=structuredClone(chartBase); cashOptions.plugins={...cashOptions.plugins,legend:{display:true,position:'bottom',labels:{boxWidth:8,font:{family:'IBM Plex Mono',size:9},color:'#746f64'}}};
+const cashOptions = {
+  ...chartBase,
+  plugins: {
+    ...chartBase.plugins,
+    tooltip: {
+      ...chartBase.plugins.tooltip,
+      callbacks: { ...chartBase.plugins.tooltip.callbacks }
+    },
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        boxWidth: 8,
+        font: { family: 'IBM Plex Mono', size: 9 },
+        color: '#746f64'
+      }
+    }
+  },
+  scales: {
+    x: { ...chartBase.scales.x, grid: { ...chartBase.scales.x.grid }, ticks: { ...chartBase.scales.x.ticks, font: { ...chartBase.scales.x.ticks.font } } },
+    y: { ...chartBase.scales.y, grid: { ...chartBase.scales.y.grid }, ticks: { ...chartBase.scales.y.ticks, font: { ...chartBase.scales.y.ticks.font } } }
+  }
+};
   setChart('cashflow-chart',{type:'bar',data:{labels:d.months,datasets:[{label:'Income',data:d.monthly_income,backgroundColor:'#1F5A45'},{label:'Expenses',data:d.monthly_expenses,backgroundColor:'#b9ad98'}]},options:cashOptions});
   const cats=Object.entries(d.category_breakdown); const palette=['#1F5A45','#a88d62','#6f7863','#b45e42','#c5b897','#343d31','#8c7760'];
   setChart('category-chart',{type:'doughnut',data:{labels:cats.map(x=>x[0]),datasets:[{data:cats.map(x=>x[1]),backgroundColor:cats.map((_,i)=>palette[i%palette.length]),borderColor:'#fbf8f0',borderWidth:3,hoverOffset:4}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{display:false},tooltip:{callbacks:{label:(ctx)=>`${ctx.label}: ${money(ctx.raw)}`}}}}});
@@ -98,8 +120,8 @@ async function loadAnalytics() {
   const entries=Object.entries(a.monthly);
   const largest=a.largest_expense;
   $('#analysis-metrics').innerHTML=`<div class="analysis-stat"><div class="metric-label">HIGHEST SPEND CATEGORY</div><strong>${escapeHTML(a.highest_expense_category||'—')}</strong></div><div class="analysis-stat"><div class="metric-label">LARGEST SINGLE EXPENSE</div><strong>${largest?money(largest.amount):money(0)}</strong></div><div class="analysis-stat"><div class="metric-label">AVERAGE MONTHLY EXPENSES</div><strong>${money(a.average_monthly_expenses)}</strong><div class="metric-foot">From first to last ledger month, gaps included</div></div><div class="analysis-stat"><div class="metric-label">OVERALL SAVINGS RATE</div><strong>${Number(a.overall_savings_rate).toFixed(1)}%</strong><div class="metric-foot">Monthly-rate mean: ${Number(a.average_monthly_savings_rate).toFixed(1)}%</div></div>`;
-  setChart('savings-chart',{type:'line',data:{labels:entries.map(x=>x[0]),datasets:[{label:'Net savings',data:entries.map(x=>x[1].savings),borderColor:'#1F5A45',backgroundColor:'rgba(31,90,69,.12)',fill:true,tension:.2,pointRadius:3,pointBackgroundColor:'#1F5A45'}]},options:structuredClone(chartBase)});
-  const cats=Object.entries(a.category_breakdown);const max=Math.max(1,...cats.map(x=>x[1]));
+  setChart('savings-chart',{type:'line',data:{labels:entries.map(x=>x[0]),datasets:[{label:'Net savings',data:entries.map(x=>x[1].savings),borderColor:'#1F5A45',backgroundColor:'rgba(31,90,69,.12)',fill:true,tension:.2,pointRadius:3,pointBackgroundColor:'#1F5A45'}]},options:chartBase});
+    const cats=Object.entries(a.category_breakdown);const max=Math.max(1,...cats.map(x=>x[1]));
   $('#analysis-categories').innerHTML=cats.length?cats.map(([name,val])=>`<div class="analysis-cat"><span>${escapeHTML(name)}</span><span class="bar"><i style="width:${val/max*100}%"></i></span><span>${money(val)}</span></div>`).join(''):'<span class="type-label">No expense categories yet.</span>';
   const c=a.month_comparison;
   $('#month-comparison').innerHTML=`<div class="eyebrow">MONTH OVER MONTH</div><h2>${c.current_month} <span class="type-label">vs</span> ${c.previous_month}</h2><div class="comparison-values"><span>Income<strong>${money(c.current.income)} <small>(${c.income_change>=0?'+':''}${money(c.income_change)})</small></strong></span><span>Expenses<strong>${money(c.current.expenses)} <small>(${c.expense_change>=0?'+':''}${money(c.expense_change)})</small></strong></span><span>Net savings<strong>${money(c.current.savings)}</strong></span></div>`;
